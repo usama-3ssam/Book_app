@@ -34,7 +34,7 @@ class LoginView extends StatelessWidget {
                 SnackBar(
                   content: Text('Login Success'),
                   backgroundColor: Colors.white,
-                  duration: Duration(seconds: 2),
+                  duration: Duration(seconds: 3),
                 ),
               );
 
