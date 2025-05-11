@@ -12,7 +12,6 @@ class ColumnForLogInSignup extends StatelessWidget {
   });
 
   final String text1Buttom;
-  final String textButtom;
   final VoidCallback fun_1;
   final formKey = GlobalKey<FormState>();
 
