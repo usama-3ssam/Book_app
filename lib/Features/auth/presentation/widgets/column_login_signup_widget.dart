@@ -8,15 +8,12 @@ class ColumnForLogInSignup extends StatelessWidget {
   ColumnForLogInSignup({
     super.key,
     required this.text1Buttom,
-    required this.textButtom,
     required this.fun_1,
-    required this.fun_2,
   });
 
   final String text1Buttom;
   final String textButtom;
   final VoidCallback fun_1;
-  final VoidCallback fun_2;
   final formKey = GlobalKey<FormState>();
 
   @override
@@ -90,19 +87,6 @@ class ColumnForLogInSignup extends StatelessWidget {
                 style: TextStyle(color: kPrimaryColor, fontSize: 24),
               ),
             ),
-            Row(
-              children: [
-                Spacer(),
-                TextButton(
-                  onPressed: fun_2,
-                  child: Text(
-                    textButtom,
-                    style: TextStyle(
-                        color: Colors.white.withOpacity(.5), fontSize: 24),
-                  ),
-                ),
-              ],
-            )
           ],
         ),
       ),
