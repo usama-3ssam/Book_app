@@ -61,7 +61,9 @@ class BooksDetailsActions extends StatelessWidget {
               count: bookModel.volumeInfo.ratingsCount ?? 0,
             ),
             HorizontalSpace(hight: 37),
-            ButtomsInDetailsBook(),
+            ButtomsInDetailsBook(
+              bookModel: bookModel,
+            ),
           ],
         ),
       ],
