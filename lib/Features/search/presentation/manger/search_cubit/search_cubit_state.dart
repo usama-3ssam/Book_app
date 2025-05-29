@@ -9,6 +9,8 @@ sealed class SearchCubitState extends Equatable {
 
 final class SearchCubitInitial extends SearchCubitState {}
 
+class BooksInitial extends SearchCubitState {}
+
 class BooksLoading extends SearchCubitState {}
 
 class BooksSuccess extends SearchCubitState {
@@ -17,9 +19,14 @@ class BooksSuccess extends SearchCubitState {
 }
 
 class BooksSearchSuccess extends SearchCubitState {
-  final List<BookModel> searchResults;
-  const BooksSearchSuccess(this.searchResults);
+  final List<BookModel> books;
+  const BooksSearchSuccess(this.books);
+
+  @override
+  List<Object> get props => [books];
 }
+
+class BooksSearchEmpty extends SearchCubitState {}
 
 class BooksFailure extends SearchCubitState {
   final String message;

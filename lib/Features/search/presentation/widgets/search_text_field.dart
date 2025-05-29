@@ -1,3 +1,4 @@
+// ignore_for_file: deprecated_member_use
 import 'package:book_app/Features/search/presentation/manger/search_cubit/search_cubit_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -17,7 +18,6 @@ class SearchTextField extends StatelessWidget {
       decoration: InputDecoration(
         hintText: 'Search by title...',
         suffixIcon: Icon(
-          // ignore: deprecated_member_use
           FontAwesomeIcons.search,
           size: 22,
         ),
