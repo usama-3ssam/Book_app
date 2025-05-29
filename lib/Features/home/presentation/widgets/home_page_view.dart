@@ -30,7 +30,13 @@ class HomePageView extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     CustomAppBar(),
-                    FeaturedBooksListView(height: .3),
+                    FeaturedBooksListView(
+                      height: .3,
+                      function: (book) {
+                        GoRouter.of(context)
+                            .push(AppRouter.kBookDetailsView, extra: book);
+                      },
+                    ),
                     Padding(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 30.0,

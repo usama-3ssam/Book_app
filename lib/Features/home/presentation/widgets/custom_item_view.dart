@@ -3,20 +3,24 @@ import 'package:flutter/material.dart';
 // import '../../../../core/utils/assets.dart';
 
 class CustomBookImage extends StatelessWidget {
-  const CustomBookImage({super.key, required this.imgUrl});
+  const CustomBookImage({super.key, required this.imgUrl, this.function});
 
   final String imgUrl;
+  final GestureTapCallback? function;
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(16),
-      child: AspectRatio(
-        aspectRatio: 2.7 / 4,
-        child: CachedNetworkImage(
-          fit: BoxFit.fill,
-          imageUrl: imgUrl,
-          errorWidget: (context, url, error) => CircularProgressIndicator(),
+    return GestureDetector(
+      onTap: function,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(16),
+        child: AspectRatio(
+          aspectRatio: 2.7 / 4,
+          child: CachedNetworkImage(
+            fit: BoxFit.fill,
+            imageUrl: imgUrl,
+            errorWidget: (context, url, error) => CircularProgressIndicator(),
+          ),
         ),
       ),
     );
