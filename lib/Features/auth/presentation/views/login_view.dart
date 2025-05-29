@@ -27,8 +27,9 @@ class LoginView extends StatelessWidget {
         ),
         body: Center(
           child: ColumnForLogInSignup(
+            textButtom: '',
+            fun_2: () {},
             text1Buttom: 'Login',
-            textButtom: 'SignUp',
             fun_1: () {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
@@ -37,11 +38,7 @@ class LoginView extends StatelessWidget {
                   duration: Duration(seconds: 3),
                 ),
               );
-
               GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
-            },
-            fun_2: () {
-              GoRouter.of(context).pushReplacement(AppRouter.kSignupView);
             },
           ),
         ),

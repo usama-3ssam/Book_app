@@ -8,7 +8,6 @@ import 'package:book_app/Features/search/presentation/manger/search_cubit/search
 import 'package:book_app/core/services/service_locator.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import '../../Features/auth/presentation/views/signup_view.dart';
 import '../../Features/home/presentation/views/book_details_view.dart';
 import '../../Features/home/presentation/views/home_view.dart';
 import '../../Features/search/presentation/views/search_view.dart';
@@ -57,10 +56,6 @@ abstract class AppRouter {
       GoRoute(
         path: kLoginView,
         builder: (context, state) => const LoginView(),
-      ),
-      GoRoute(
-        path: kSignupView,
-        builder: (context, state) => const SignupView(),
       ),
       GoRoute(
         path: kSearchView,

@@ -1,4 +1,4 @@
-// ignore_for_file: file_namesl
+// ignore_for_file: file_namesl, deprecated_member_use
 import 'package:book_app/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/utils/assets.dart';
