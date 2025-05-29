@@ -27,8 +27,6 @@ class LoginView extends StatelessWidget {
         ),
         body: Center(
           child: ColumnForLogInSignup(
-            textButtom: '',
-            fun_2: () {},
             text1Buttom: 'Login',
             fun_1: () {
               ScaffoldMessenger.of(context).showSnackBar(
