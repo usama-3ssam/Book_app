@@ -1,4 +1,6 @@
+import 'package:book_app/Features/auth/data/auth_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/utils/app_router.dart';
 import '../widgets/column_logIn_signup_widget.dart';
@@ -20,7 +22,15 @@ class LoginView extends StatelessWidget {
             TextButton(
               child: Text('Skip'),
               onPressed: () {
+                context.read<AuthCubit>().logout();
                 GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Login but not authorized to view books'),
+                    backgroundColor: Colors.white,
+                    duration: Duration(seconds: 3),
+                  ),
+                );
               },
             )
           ],
@@ -30,6 +40,7 @@ class LoginView extends StatelessWidget {
             child: ColumnForLogInSignup(
               text1Buttom: 'Login',
               fun_1: () {
+                context.read<AuthCubit>().login();
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     content: Text('Login Success'),
