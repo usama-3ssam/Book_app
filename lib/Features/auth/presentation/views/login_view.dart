@@ -26,18 +26,20 @@ class LoginView extends StatelessWidget {
           ],
         ),
         body: Center(
-          child: ColumnForLogInSignup(
-            text1Buttom: 'Login',
-            fun_1: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text('Login Success'),
-                  backgroundColor: Colors.white,
-                  duration: Duration(seconds: 3),
-                ),
-              );
-              GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
-            },
+          child: SingleChildScrollView(
+            child: ColumnForLogInSignup(
+              text1Buttom: 'Login',
+              fun_1: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Login Success'),
+                    backgroundColor: Colors.white,
+                    duration: Duration(seconds: 3),
+                  ),
+                );
+                GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
+              },
+            ),
           ),
         ),
       ),

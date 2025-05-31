@@ -51,7 +51,7 @@ class ColumnForLogInSignup extends StatelessWidget {
 
                 return null;
               },
-              hint: "username",
+              hint: "email",
               radius: 10,
             ),
             HorizontalSpace(
@@ -60,7 +60,7 @@ class ColumnForLogInSignup extends StatelessWidget {
             CustomTextField(
               validat: (value) => value == null || value.isEmpty
                   ? 'Please enter your password'
-                  : value.length < 6
+                  : value.length < 8
                       ? 'Password must be at least 6 characters'
                       : null,
               hint: "psaaword",

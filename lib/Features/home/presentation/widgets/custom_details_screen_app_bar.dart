@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import '../../../../core/utils/app_router.dart';
 
 class CustomDetailsScreenAppBar extends StatelessWidget {
   const CustomDetailsScreenAppBar({
@@ -13,7 +11,7 @@ class CustomDetailsScreenAppBar extends StatelessWidget {
       children: [
         IconButton(
           onPressed: () {
-            GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
+            Navigator.pop(context);
           },
           icon: Icon(
             Icons.close_rounded,
